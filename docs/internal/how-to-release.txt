@@ -1,0 +1,9 @@
+* install required packages
+$ python -m pip install wheel twine
+
+* package enginestack
+$ python setup.py bdist_wheel
+
+* upload release packages to TEST PyPI
+$ twine upload --repository testpypi dist/*
+
