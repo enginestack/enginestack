@@ -1,3 +1,7 @@
+[build-system]
+requires = ["setuptools>=40.8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [tool.pytest.ini_options]
 markers = [
     "slow: marks tests as slow (deselect with '-m \"not slow\"')",
@@ -6,3 +10,4 @@ markers = [
 addopts = [
     "--strict-markers"
 ]
+

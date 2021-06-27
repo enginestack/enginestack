@@ -1,5 +1,7 @@
 CHANGES
 =======
 
+* add internal doc
+* refactor code infrasture
 * first sdist
 * initial commit
