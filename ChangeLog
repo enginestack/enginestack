@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+* add management script
 * add internal doc
 * refactor code infrasture
 * first sdist
