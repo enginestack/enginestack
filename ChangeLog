@@ -3,7 +3,8 @@ CHANGES
 
 * use traditional configure style
 * make flake8 happy
-* add management script (#2)
+* add management script
+* add internal doc
 * refactor code infrasture
 * first sdist
 * initial commit
