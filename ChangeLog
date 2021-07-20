@@ -1,6 +1,8 @@
 CHANGES
 =======
 
+* use traditional configure style
+* make flake8 happy
 * add management script
 * add internal doc
 * refactor code infrasture

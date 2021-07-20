@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=40.8.0", "wheel"]
+requires = ["setuptools >= 45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
@@ -11,3 +11,46 @@ addopts = [
     "--strict-markers"
 ]
 
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+minversion = 3.23.1
+skipsdist = False
+isolated_build = True
+isolated_build_env = .package
+envlist=
+    py37
+    py38
+    py39
+    pypy37
+    flake8
+
+[testenv]
+deps =
+    py{37,38,39}: -r./tests/requirements/py3.txt
+    pypy37: -r./tests/requirements/py3.txt
+setenv =
+    PIP_INDEX_URL = https://pypi.tuna.tsinghua.edu.cn/simple
+    PIP_EXTRA_INDEX_URL = https://pypi.org/simple
+    PYTHONDONTWRITEBYTECODE = 1
+passenv = USER
+commands = {envpython} -m pytest
+
+[testenv:py37]
+basepython = python3.7
+
+[testenv:py38]
+basepython = python3.8
+
+[testenv:py39]
+basepython = python3.9
+
+[testenv:pypy37]
+basepython = pypy3.7
+
+[testenv:flake8]
+basepython = python3.9
+deps = flake8
+changedir = {toxinidir}
+commands = flake8 enginestack
+"""
