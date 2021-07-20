@@ -1,8 +1,8 @@
 CHANGES
 =======
 
-* add management script
-* add internal doc
+* make flake8 happy
+* add management script (#2)
 * refactor code infrasture
 * first sdist
 * initial commit
