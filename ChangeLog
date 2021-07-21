@@ -1,10 +1,12 @@
 CHANGES
 =======
 
+* update release conf (#6)
+* update release conf (#4)
 * use traditional configure style
+* make flake8 happy (#3)
 * make flake8 happy
-* add management script
-* add internal doc
+* add management script (#2)
 * refactor code infrasture
 * first sdist
 * initial commit
